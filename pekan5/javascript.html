@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript</title>
+  </head>
+  <body>
+    <div>
+      <form id="conditional">
+        <label>Nama Lengkap</label>
+        <input type="text" id="nama" /> <br />
+        <br />
+        <label>Nilai</label>
+        <input type="number" id="nilai" /> <br />
+        <br />
+        <input type="submit" value="hitung" />
+        <input type="button" onclick="clearInput()" value="Clear" />
+      </form>
+
+      <h1>Output</h1>
+      <p id="output"></p>
+    </div>
+
+    <script>
+      var formPenilaian = document.getElementById("conditional");
+
+      formPenilaian.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var inputNama = document.getElementById("nama").value;
+        var inputNilai = document.getElementById("nilai").value;
+
+        var output = document.getElementById("output");
+
+        if (inputNilai > 80 && inputNilai <= 100) {
+          output.innerHTML = `Halo ${inputNama} nilai anda ${inputNilai} predikat nilai anda A (Sangat Baik)`;
+        } else if (inputNilai > 70 && inputNilai <= 80) {
+          output.innerHTML = `Halo ${inputNama} nilai anda ${inputNilai} predikat nilai anda B (Baik)`;
+        } else if (inputNilai > 60 && inputNilai <= 70) {
+          output.innerHTML = `Halo ${inputNama} nilai anda ${inputNilai} predikat nilai anda C (Cukup)`;
+        } else if (inputNilai > 50 && inputNilai <= 60) {
+          output.innerHTML = `Halo ${inputNama} nilai anda ${inputNilai} predikat nilai anda D (Buruk)`;
+        } else {
+          output.innerHTML = `Halo ${inputNama} nilai anda ${inputNilai} predikat nilai anda E (Error)`;
+        }
+
+        clearInput();
+      });
+
+      function clearInput() {
+        var inputNama = (document.getElementById("nama").value = "");
+        var inputNilai = (document.getElementById("nilai").value = "");
+      }
+
+      function perkenalan(nama, age) {
+        return `Halo nama saya  ${nama} dan saya berumur ${age}`;
+      }
+
+      console.log(perkenalan("Rezky", 27));
+      console.log(perkenalan("Adi", 30));
+      console.log(perkenalan("Budi", 31));
+      console.log(perkenalan("Ardi", 40));
+      console.log(perkenalan("Thio", 50));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #34495e;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      input[type="text"] {
+        width: 98%;
+        padding: 12px 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+      }
+      select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+      }
+
+      input[type="text"]:focus,
+      select:focus {
+        outline: none;
+        border-color: #3498db;
+        background: white;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+      }
+
+      .checkbox-group {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 25px 0;
+      }
+
+      .checkbox-group h3 {
+        color: #2c3e50;
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 18px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+
+      .checkbox-group label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        color: #34495e;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .checkbox-group label:hover {
+        color: #3498db;
+      }
+
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+        accent-color: #3498db;
+        cursor: pointer;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      button:hover {
+        background: #2980b9;
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 20px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Spiritual Activity Tracker</h2>
+    <form id="myForm">
+      <div class="form-group">
+        <label>Full Name:</label>
+        <input type="text" name="fullName" required />
+      </div>
+
+      <div class="form-group">
+        <label>Class:</label>
+        <input type="text" name="class" required />
+      </div>
+
+      <div class="form-group">
+        <label>Fasting:</label>
+        <select name="fasting" required>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Prayer:</label>
+        <select name="prayer" required>
+          <option value="Fajr">Fajr</option>
+          <option value="Dzuhur">Dzuhur</option>
+          <option value="Asr">Asr</option>
+          <option value="Maghrib">Maghrib</option>
+          <option value="Isha">Isha</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Tadarus:</label>
+        <select name="tadarus" required>
+          <option value="1 thing">1 thing</option>
+          <option value="2 things">2 things</option>
+          <option value="3 things">3 things</option>
+          <option value="4 things">4 things</option>
+          <option value="1 chapter">1 chapter</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Dhikr:</label>
+        <select name="dhikr" required>
+          <option value="Morning">Morning</option>
+          <option value="Evening">Evening</option>
+        </select>
+      </div>
+
+      <div class="checkbox-group">
+        <h3>Checklist:</h3>
+        <label><input type="checkbox" name="duha" /> Duha Prayer</label><br />
+        <label><input type="checkbox" name="sunnah" /> Sunnah Prayers</label
+        ><br />
+        <label><input type="checkbox" name="tarawih" /> Tarawih</label><br />
+        <label><input type="checkbox" name="alms" /> Alms</label><br />
+        <label
+          ><input type="checkbox" name="helpingParents" /> Helping
+          Parents</label
+        ><br />
+        <label
+          ><input type="checkbox" name="lectures" /> Listen to Lectures</label
+        ><br />
+        <label><input type="checkbox" name="study" /> Study at Home</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const form = e.target;
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData.entries());
+
+          google.script.run
+            .withSuccessHandler(() => {
+              alert("Data submitted successfully!");
+              form.reset();
+            })
+            .withFailureHandler((msg) => alert(msg))
+            .writeToSheet(data);
+        });
+    </script>
+  </body>
+</html>

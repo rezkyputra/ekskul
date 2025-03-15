@@ -1,0 +1,60 @@
+header {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  margin: 30px 150px 20px;
+  border: 3px solid black;
+  height: 300px;
+  padding: 30px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+li {
+  display: inline;
+  margin-right: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  background-image: url("../image/pattern.jpg");
+}
+
+main {
+  background-color: aquamarine;
+  margin: 90px 150px 50px;
+  padding: 30px;
+  border: 3px solid gray;
+  border-radius: 30px;
+}
+article {
+  border-bottom: 3px solid gray;
+  margin-top: 30px;
+}
+
+footer {
+  background-color: aquamarine;
+  padding: 30px;
+}
+.text-footer {
+  text-align: center;
+  color: white;
+}
+
+input {
+  border: none;
+  border-bottom: 3px solid black;
+}

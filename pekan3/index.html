@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="image/logo.png" alt="" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </header>
+    <main>
+      <h2>Register Akun</h2>
+      <form action="home.html" method="post">
+        <label>Nama Lengkap</label>
+        <input
+          type="text"
+          name="fullname"
+          placeholder="Masukan nama Lengkap"
+          required
+        />
+        <br />
+        <br />
+        <label>Usia</label>
+        <input type="number" name="age" placeholder="Masukan Usia Anda" />
+        <br />
+        <br />
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Masukan Password Anda"
+        />
+        <br />
+        <br />
+        <label>Jenis Kelamin</label> <br />
+        <input type="radio" name="gender" value="1" /> Laki-laki <br />
+        <input type="radio" name="gender" value="2" /> Perempuan
+        <br />
+        <br />
+        <label>Skill</label> <br />
+        <input type="checkbox" name="skill" value="1" /> HTML <br />
+        <input type="checkbox" name="skill" value="2" /> CSS <br />
+        <input type="checkbox" name="skill" value="3" /> Javascript
+        <br />
+        <br />
+        <label>Bahasa</label> <br />
+        <select name="language">
+          <option value="1">Indonesia</option>
+          <option value="2">English USA</option>
+          <option value="3">English UK</option>
+          <option value="4">China</option>
+        </select>
+        <br />
+        <br />
+        <label>Alamat</label> <br />
+        <textarea name="address" cols="20" rows="5"></textarea> <br />
+        <br />
+        <input type="submit" value="Register" />
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
